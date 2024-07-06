@@ -1,7 +1,8 @@
+'use client'
 
 import React from 'react';
-import useModalStore from '../stores/useModalStore';
-import Modal from '../components/Model';
+import useModalStore from '../../stores/useModalStore';
+import Modal from '../../components/Model';
 
 const GreenPage = () => {
   const { modal1Open, modal2Open, toggleModal1, toggleModal2 } = useModalStore();

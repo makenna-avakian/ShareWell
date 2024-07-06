@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
-import useModalStore from '../stores/useModalStore';
-import Modal from '../components/Model';
+import useModalStore from '../../stores/useModalStore';
+import Modal from '../../components/Model';
 
 const BlueModal = () => {
     const { modal2Open, modal3Open, toggleModal2, toggleModal3 } = useModalStore();
