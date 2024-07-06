@@ -12,8 +12,8 @@ const GreenPage = () => {
       <h1 className="text-white text-3xl p-4">GREEN</h1>
       <button onClick={toggleModal1} className="m-4 p-2 bg-white">Open Modal 1</button>
       <button onClick={toggleModal2} className="m-4 p-2 bg-white">Open Modal 2</button>
-      {modal1Open && <Modal title="Modal 1" onClose={toggleModal1} />}
-      {modal2Open && <Modal title="Modal 2" onClose={toggleModal2} />}
+      {modal1Open && <Modal title="Modal 1"  />}
+      {modal2Open && <Modal title="Modal 2" />}
     </div>
   );
 };
