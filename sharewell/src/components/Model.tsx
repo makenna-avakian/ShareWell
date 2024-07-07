@@ -44,10 +44,10 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div ref={modalRef} className="w-[640px] h-[498px] bg-white rounded-xl flex-col justify-start items-center inline-flex overflow-hidden">
-    <div className="w-[640px] h-56 bg-indigo-500 items-center pl-[48px] pt-[48px] pr-[196px] pb-[43px] shadow-custom inline-flex">
-        <div className="flex-col justify-start items-start gap-3 inline-flex">
-            <div className="justify-start items-center gap-[106px] inline-flex">
+      <div ref={modalRef} className="w-[640px] h-[498px] bg-white rounded-xl flex-col justify-start items-center inline-flex overflow-auto">
+    <div className="w-[640px] h-56 bg-indigo-500 items-center pl-12 pt-12 pr-[196px] pb-[43px] shadow-custom inline-flex">
+        <div className="flex-col justify-start items-start gap-3 inline-flex m-0 p-0">
+            <div className="justify-start items-center gap-[106px] inline-flex m-0 p-0">
                 <div className="w-[396px] text-white text-[32px] font-['Poppins'] leading-[44.80px]">{modalInfo.title}</div>
             </div>
             <div className="text-white text-sm  font-['Poppins'] leading-tight">{modalInfo.text}</div>
@@ -56,10 +56,10 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
         <div className="w-[345px] h-[343.80px] pl-10 pr-[38.43px] pt-[45.02px] pb-[44.94px] origin-top-left -rotate-45 justify-center items-center inline-flex">
 <div className="w-[266.55px] h-[253.85px] relative flex flex-col justify-start items-start">
   <div className="w-[118.99px] h-[158.65px] relative">
-        <img src="/images/greenguy.svg" alt="Blob 1" className="w-[115.74px] h-[157.72px] left-[1.60px] top-[0.26px] absolute"/>
+        <img src="/images/greenguy.svg" alt="Blob 1" className="w-[115.74px] h-[157.72px] left-[1.60px] top-[0.26px] absolute m-0 p-0"/>
       </div>
       <div className="w-[166.59px] h-[199.91px] relative">
-        <img src="/images/yellowguy.svg" alt="Blob 2" className="w-[160.23px] h-[195.15px] left-[1.86px] top-[1.53px] absolute"/>
+        <img src="/images/yellowguy.svg" alt="Blob 2" className="w-[160.23px] h-[195.15px] left-[1.86px] top-[1.53px] absolute m-0 p-0"/>
      </div>
      <div className="w-[138.03px] h-[171.35px] relative">
         <img src="/images/blueguy.svg" alt="Blob 3"  className="w-[137.98px] h-[166.65px] left-[-0px] top-[1.69px] absolute"/>
