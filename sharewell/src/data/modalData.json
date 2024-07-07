@@ -1,24 +1,386 @@
 {
-    "modal1": {
-      "title": "Modal 1",
-      "text": "Lorem Ipsum is simply",
-      "date": "Thursday, Jun 22, 2024",
-      "time": "06:00pm - 07:30pm EST",
-      "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+  "web": {
+    "modal4": {
+      "title": {
+        "className": "w-[396px] text-white text-[32px] font-medium font-['Poppins'] leading-[44.80px]",
+        "text": "Modal 1"
+      },
+      "text": {
+        "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is simply"
+      },
+      "date": {
+        "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+        "text": "Thursday, Jun 22, 2024"
+      },
+      "time": {
+        "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+        "text": "06:00pm - 07:30pm EST"
+      },
+      "body": {
+        "className": "self-stretch text-zinc-800 text-sm font-normal font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      },
+      "subtitle1": {
+        "className": "w-[400px] text-neutral-600 text-sm font-normal font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum"
+      },
+      "subtitle2": {
+        "className": "self-stretch text-indigo-500 text-base font-bold font-['Poppins'] leading-snug",
+        "text": "Lorem Ipsum"
+      },
+      "dummy": {
+        "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is simply dummy text."
+      },
+      "image":{
+          "className": "w-[266.55px] h-[253.85px] -m-4 -mb-10"
+        },
+      "button": {
+        "className": "self-stretch px-8 py-3 bg-teal-500 opacity-10 rounded-xl justify-center items-center gap-2 inline-flex",
+        "text": "Lorem Ipsum",
+        "buttonClassName": "text-zinc-800 opacity-20 text-base font-normal font-['Poppins'] uppercase leading-snug"
+      }
     },
-    "modal2": {
-      "title": "Modal 2",
-      "text": "Lorem Ipsum is fun",
-      "date": "Friday, Jun 04, 2023", 
-      "time": "09:00pm - 09:30pm PST",
-      "body": "Lorem Ipsum is simply dummy cillum dolore eu fugiat nulla pariatur. cillum dolore eu fugiat nulla pariatur."
+    "modal5": {
+      "title": {
+        "className": "w-[396px] text-white text-[32px] font-medium font-['Poppins'] leading-[44.80px]",
+        "text": "Modal 2"
+      },
+      "text": {
+        "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is fun"
+      },
+      "date": {
+        "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+        "text": "Friday, Jun 04, 2023"
+      },
+      "time": {
+        "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+        "text": "09:00pm - 09:30pm PST"
+      },
+      "body": {
+        "className": "self-stretch text-zinc-800 text-sm font-normal font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is simply dummy cillum dolore eu fugiat nulla pariatur. cillum dolore eu fugiat nulla pariatur."
+      },
+      "subtitle1": {
+        "className": "w-[400px] text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum"
+      },
+      "subtitle2": {
+        "className": "self-stretch text-indigo-500 text-base font-medium font-['Poppins'] leading-snug",
+        "text": "Lorem Ipsum"
+      },
+      "dummy": {
+        "className": "self-stretch text-center text-neutral-600 text-[15px] font-medium font-['Poppins'] leading-[21px]",
+        "text": "Lorem Ipsum is simply dummy text."
+      },
+      "image":{
+        "className": "w-[266.55px] h-[253.85px] -m-4 -mb-10"
+      },
+      "button": {
+        "className": "w-[592px] h-[46px] px-8 py-3",
+        "text": "Lorem Ipsum",
+        "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Poppins'] leading-snug"
+      }
     },
-    "modal3": {
-      "title": "Modal 3",
-      "text": "Lorem Ipsum is wack",
-      "date": "Wednesday, Jun 21, 2023",
-      "time": "07:00pm - 07:30pm EST",
-      "body": "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+    "modal6": {
+      "title": {
+        "className": "w-[396px] text-white text-[32px] font-medium font-['Poppins'] leading-[44.80px]",
+        "text": "Modal 3"
+      },
+      "text": {
+        "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is wack"
+      },
+      "date": {
+        "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+        "text": "Wednesday, Jun 21, 2023"
+      },
+      "time": {
+        "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+        "text": "07:00pm - 07:30pm EST"
+      },
+      "body": {
+        "className": "self-stretch text-zinc-800 text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+      },
+      "subtitle1": {
+        "className": "w-[400px] text-neutral-600 text-base font-normal font-['Poppins'] uppercase leading-snug",
+        "text": "Lorem Ipsum"
+      },
+      "subtitle2": {
+        "className": "self-stretch text-indigo-500 text-base font-semibold font-['Poppins'] leading-snug",
+        "text": "Lorem Ipsum"
+      },
+      "dummy": {
+        "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+        "text": "Lorem Ipsum is simply dummy text."
+      },
+      "image":{
+        "className": "w-[266.55px] h-[253.85px] -m-4 -mb-10"
+      },
+      "button": {
+        "className": "px-8 py-3",
+        "text": "Lorem Ipsum",
+        "buttonClassName": "text-zinc-800 opacity-20 text-lg font-normal font-['Poppins'] leading-loose tracking-wide"
+      }
     }
-  }
-  
+  },
+  "tablet": {
+      "modal7": {
+        "title": {
+          "className": "w-[396px] text-white text-[32px] font-medium font-['Poppins'] leading-[44.80px]",
+          "text": "Modal 1"
+        },
+        "text": {
+          "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is simply"
+        },
+        "date": {
+          "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+          "text": "Thursday, Jun 22, 2024"
+        },
+        "time": {
+          "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+          "text": "06:00pm - 07:30pm EST"
+        },
+        "body": {
+          "className": "self-stretch text-zinc-800 text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+        },
+        "subtitle1": {
+          "className": "w-[400px] text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum"
+        },
+        "subtitle2": {
+          "className": "self-stretch text-indigo-500 text-base font-bold font-['Poppins'] leading-snug",
+          "text": "Lorem Ipsum"
+        },
+        "dummy": {
+          "className": "self-stretch text-center text-neutral-600 text-sm font-normal font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is simply dummy text."
+        },
+        "image":{
+          "className": "w-[266.55px] h-[253.85px] -m-4 -mb-10"
+        },
+        "button": {
+          "className": "w-[592px] h-[46px] px-8 py-3 gap 2",
+          "text": "Lorem Ipsum",
+          "buttonClassName": "text-zinc-800/opacity-20 text-base font-semibold font-['Poppins'] uppercase leading-snug"
+        }
+      },
+      "modal8": {
+        "title": {
+          "className": "w-[396px] text-white text-[32px] font-medium font-['Poppins'] leading-[44.80px]",
+          "text": "Modal 2"
+        },
+        "text": {
+          "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is fun"
+        },
+        "date": {
+          "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+          "text": "Friday, Jun 04, 2023"
+        },
+        "time": {
+          "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+          "text": "09:00pm - 09:30pm PST"
+        },
+        "body": {
+          "className": "self-stretch text-zinc-800 text-base font-medium font-['Poppins'] leading-snug",
+          "text": "Lorem Ipsum is simply dummy cillum dolore eu fugiat nulla pariatur. cillum dolore eu fugiat nulla pariatur."
+        },
+        "subtitle1": {
+          "className": "w-[400px] text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum"
+        },
+        "subtitle2": {
+          "className": "self-stretch text-indigo-500 text-base font-bold font-['Poppins'] leading-snug",
+          "text": "Lorem Ipsum"
+        },
+        "dummy": {
+          "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is simply dummy text."
+        },
+        "image":{
+          "className": "w-[266.55px] h-[253.85px] -m-4 -mb-10"
+        },
+        "button": {
+          "className": "w-[592px] h-[46px] px-8 py-3 gap 2",
+          "text": "Lorem Ipsum",
+          "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Poppins'] leading-snug"
+        }
+      },
+      "modal9": {
+        "title": {
+          "className": "w-[396px] text-white text-[32px] font-medium font-['Poppins'] leading-[44.80px]",
+          "text": "Modal 3"
+        },
+        "text": {
+          "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is cool"
+        },
+        "date": {
+          "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+          "text": "Wednesday, Jun 21, 2023"
+        },
+        "time": {
+          "className": "text-white text-base font-medium font-['Poppins'] leading-snug",
+          "text": "07:00pm - 07:30pm EST"
+        },
+        "body": {
+          "className": "self-stretch text-zinc-800 text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        },
+        "subtitle1": {
+          "className": "w-[400px] text-neutral-600 text-sm font-normal font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum"
+        },
+        "subtitle2": {
+          "className": "self-stretch text-indigo-500 text-base font-semibold font-['Poppins'] leading-snug",
+          "text": "Lorem Ipsum"
+        },
+        "dummy": {
+          "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+          "text": "Lorem Ipsum is simply dummy text."
+        },
+        "image":{
+          "className": "w-[266.55px] h-[253.85px] -m-4 -mb-10"
+        },
+        "button": {
+          "className": "w-[592px] h-[46px] px-8 py-3 gap 2",
+          "text": "Lorem Ipsum",
+          "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Poppins'] leading-snug"
+        }
+      }
+    },
+  "mobile": {
+        "modal1": {
+          "title": {
+            "className": "text-white text-lg font-medium font-['Poppins'] leading-[25.20px]",
+            "text": "Modal 1"
+          },
+          "text": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is simply"
+          },
+          "date": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Thursday, Jun 22, 2024"
+          },
+          "time": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "06:00pm - 07:30pm EST"
+          },
+          "body": {
+            "className": "self-stretch text-zinc-800 text-base font-medium font-['Poppins'] leading-snug",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+          },
+          "subtitle1": {
+            "className": "text-neutral-600 text-sm font-normal font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum"
+          },
+          "subtitle2": {
+            "className": "text-indigo-500 text-base font-bold font-['Poppins'] leading-snug",
+            "text": "Lorem Ipsum"
+          },
+          "dummy": {
+            "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is simply dummy text"
+          },
+          "image": {
+            "className": "w-[158.15px] h-[150.61px] -mt-2"
+          },
+          "button": {
+            "className": "w-[291px] px-[72px] h-12 py-4",
+            "text": "Lorem Ipsum",
+            "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Roboto'] leading-none tracking-wide"
+          }
+        },
+        "modal2": {
+          "title": {
+            "className": "text-white text-lg font-medium font-['Poppins'] leading-[25.20px]",
+            "text": "Modal 2"
+          },
+          "text": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is fun"
+          },
+          "date": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Friday, Jun 04, 2023"
+          },
+          "time": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "09:00pm - 09:30pm PST"
+          },
+          "body": {
+            "className": "w-[291px] text-zinc-800 text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is simply dummy cillum dolore eu fugiat nulla pariatur. cillum dolore eu fugiat nulla pariatur."
+          },
+          "subtitle1": {
+            "className": "text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum"
+          },
+          "subtitle2": {
+            "className": "text-neutral-600 text-base font-bold font-['Poppins'] leading-snug",
+            "text": "Lorem Ipsum"
+          },
+          "dummy": {
+            "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is simply dummy text"
+          },
+          "image":{
+            "className": "w-[158.15px] h-[150.61px] -m-4"
+          },
+          "button": {
+            "className": "px-[72px] py-4",
+            "text": "Lorem Ipsum",
+            "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Roboto'] leading-none tracking-wide"
+          }
+        },
+        "modal3": {
+          "title": {
+            "className": "text-white text-lg font-medium font-['Poppins'] leading-[25.20px]",
+            "text": "Modal 3"
+          },
+          "text": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is cool"
+          },
+          "date": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Wednesday, Jun 21, 2023"
+          },
+          "time": {
+            "className": "text-white text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "07:00pm - 07:30pm EST"
+          },
+          "body": {
+            "className": "self-stretch text-zinc-800 text-base font-medium font-['Poppins'] leading-snug",
+            "text": "Lorem Ipsum qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+          },
+          "subtitle1": {
+            "className": "text-indigo-500 text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum"
+          },
+          "subtitle2": {
+            "className": "text-neutral-600 text-base font-medium font-['Poppins'] leading-snug",
+            "text": "Lorem Ipsum"
+          },
+          "dummy": {
+            "className": "self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight",
+            "text": "Lorem Ipsum is simply dummy text"
+          },
+          "image":{
+            "className": "w-[158.15px] h-[150.61px] -m-4"
+          },
+          "button": {
+            "className": "px-[72px] py-4",
+            "text": "Lorem Ipsum",
+            "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-[Roboto] leading-none tracking-wide"
+          }
+        }
+      }    
+}  

@@ -1,20 +1,37 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import useModalStore from "@/stores/useModalStore";
 import modalData from '../data/modalData.json';
 import Image from 'next/image';
-
+import { tailwindClasses } from "@/app/tailwindclasses";
 
 interface ModalProps {
-    title: 'Modal 1' | 'Modal 2' | 'Modal 3';
-    text?: string;
-    time?: string;
+  title: 'Modal 1' | 'Modal 2' | 'Modal 3';
 }
 
 const Modal: React.FC<ModalProps> = ({ title }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const { closeModal1, closeModal2, closeModal3 } = useModalStore();
+  const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg'>('sm');
 
-  //Handle closing outside of the Modal
+  // Determine screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setScreenSize('lg');
+      } else if (window.innerWidth >= 768) {
+        setScreenSize('md');
+      } else {
+        setScreenSize('sm');
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Handle closing outside of the Modal
   const handleClose = () => {
     if (title === 'Modal 1') closeModal1();
     if (title === 'Modal 2') closeModal2();
@@ -34,56 +51,53 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
     };
   }, [handleClose]);
 
-  //Modal's Lorem Ispum texts and time are same from modal to modal, so setting that here
-  const modalInfo = title === 'Modal 1'
-    ? modalData.modal1
-    : title === 'Modal 2'
-    ? modalData.modal2
-    : modalData.modal3;
+  // Modal info based on title and screen size
+  const getModalInfo = (title: string) => {
+    let modalInfo;
+    if (screenSize === 'lg') {
+      modalInfo = title === 'Modal 1' ? modalData.web.modal4 : title === 'Modal 2' ? modalData.web.modal5 : modalData.web.modal6;
+    } else if (screenSize === 'md') {
+      modalInfo = title === 'Modal 1' ? modalData.tablet.modal7 : title === 'Modal 2' ? modalData.tablet.modal8 : modalData.tablet.modal9;
+    } else {
+      modalInfo = title === 'Modal 1' ? modalData.mobile.modal1 : title === 'Modal 2' ? modalData.mobile.modal2 : modalData.mobile.modal3;
+    }
+    return modalInfo;
+  };
 
+  const modalInfo = getModalInfo(title);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div ref={modalRef} className="w-[640px] h-[498px] bg-white rounded-xl flex-col justify-start items-center inline-flex overflow-auto">
-    <div className="w-[640px] h-56 bg-indigo-500 items-center pl-12 pt-12 pr-[196px] pb-[43px] shadow-custom inline-flex">
-        <div className="flex-col justify-start items-start gap-3 inline-flex m-0 p-0">
-            <div className="justify-start items-center gap-[106px] inline-flex m-0 p-0">
-                <div className="w-[396px] text-white text-[32px] font-['Poppins'] leading-[44.80px]">{modalInfo.title}</div>
+      <div ref={modalRef} 
+      className="w-[339px] h-[505px] bg-white rounded-xl flex-col justify-start items-center sm:w-[339px] sm:h-[505px] md:w-[640px] md:h-[498px] lg:w-[640px] lg:h-[498px] overflow-auto"
+      >
+    <div className="self-stretch h-[181px] bg-indigo-500 justify-center items-center gap-2.5  sm:self-stretch sm:h-[181px] sm:bg-indigo-500 sm:justify-center sm:items-center sm:gap-2.5 md:w-[640px] md:h-56 md:bg-indigo-500 md:justify-center md:items-center md:gap-2.5 lg:self-stretch lg:h-56 lg:bg-indigo-500 lg:shadow-custom lg:justify-center lg:items-center lg:gap-2.5 relative overflow-hidden">
+        <div className="flex-col justify-start items-start gap-3 inline-flex text-left ml-6 mt-12 mb-6 md:ml-12 md:mt-12 lg:ml-12 lg:mt-12">
+            <div className="justify-start items-center gap-[106px] ">
+                <div className={modalInfo.title.className}>{modalInfo.title.text}</div> 
             </div>
-            <div className="text-white text-sm  font-['Poppins'] leading-tight">{modalInfo.text}</div>
-            <div className="text-white text-base  font-['Poppins'] leading-snug">{modalInfo.date}<br/>{modalInfo.time}</div>
+            <div className={modalInfo.text.className}>{modalInfo.text.text}</div>
+            <div className={modalInfo.date.className}>{modalInfo.date.text}<br/>{modalInfo.time.text}</div>
         </div>
-        <div className="w-[345px] h-[343.80px] pl-10 pr-[38.43px] pt-[45.02px] pb-[44.94px] origin-top-left -rotate-45 justify-center items-center inline-flex">
-<div className="w-[266.55px] h-[253.85px] relative flex flex-col justify-start items-start">
-  <div className="w-[118.99px] h-[158.65px] relative">
-        <img src="/images/greenguy.svg" alt="Blob 1" className="w-[115.74px] h-[157.72px] left-[1.60px] top-[0.26px] absolute m-0 p-0"/>
-      </div>
-      <div className="w-[166.59px] h-[199.91px] relative">
-        <img src="/images/yellowguy.svg" alt="Blob 2" className="w-[160.23px] h-[195.15px] left-[1.86px] top-[1.53px] absolute m-0 p-0"/>
-     </div>
-     <div className="w-[138.03px] h-[171.35px] relative">
-        <img src="/images/blueguy.svg" alt="Blob 3"  className="w-[137.98px] h-[166.65px] left-[-0px] top-[1.69px] absolute"/>
-        </div>
+        <img src="/images/logo.svg" alt="logo" className={"absolute bottom-0 right-0 "+ modalInfo.image.className}/>
     </div>
-    </div>
-    </div>
-    <div className="self-stretch px-6 pt-6 justify-start items-center gap-2.5 inline-flex">
+    <div className="self-stretch px-6 pt-6 justify-start items-center gap-2.5 ">
         <div className="flex-col justify-start items-start inline-flex">
             <div className="flex-col justify-start items-start gap-1 flex">
-            <div className="w-[400px] text-neutral-600 text-sm  font-['Poppins'] leading-tight">Lorem Ipsum</div>
-                <div className="self-stretch text-indigo-500 text-base font-bold font-['Poppins'] leading-snug">Lorem Ipsum</div>
+            <div className={modalInfo.subtitle1.className}>{modalInfo.subtitle1.text}</div>
+                <div className={modalInfo.subtitle2.className}>{modalInfo.subtitle2.text}</div>
             </div>
         </div>
         <div className="w-6 h-6 relative" />
     </div>
-    <div className="self-stretch h-20 px-6 pt-4 pb-6 flex-col justify-center items-start gap-4 flex">
-        <div className="self-stretch text-zinc-800 text-sm  font-['Poppins'] leading-tight">{modalInfo.body}</div>
+    <div className="w-[339px] h-[150px] px-6 pt-4 pb-6 self-stretch flex-col justify-center items-start gap-4 flex sm:h-32 sm:text-base sm:font-medium lg:h-20 lg:text-sm lg:font-normal md:h-20 md:text-sm md:font-medium">
+        <div className={modalInfo.body.className}>{modalInfo.body.text}</div>
     </div>
-    <div className="self-stretch h-[124px] p-6 border-t border-gray-200 flex-col justify-start items-start gap-2.5 flex">
-        <div className="w-[592px] text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight">Lorem Ipsum is simply dummy text.</div>
-        <button className="w-[592px] h-[46px] px-8 py-3 bg-teal-500 opacity-10 rounded-xl justify-center items-center gap-2 inline-flex">
-            <div className="text-zinc-800 opacity-20 text-base font-normal font-['Poppins'] uppercase leading-snug">Lorem Ipsum</div>
-        </button>
+    <div className="self-stretch h-[126px] p-6 border-t border-gray-200 flex-col justify-start items-start gap-2.5 flex lg:h-[124px] md:h-[124px] sm:h-[126px]">
+        <div className="self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight sm:font-medium lg:font-medium md:font-normal">{modalInfo.dummy.text}</div>
+        <div className={modalInfo.button.className + " self-stretch bg-teal-500 opacity-10 rounded-xl justify-center items-center inline-flex"}>
+            <div className={modalInfo.button.buttonClassName}>{modalInfo.button.text}</div>
+        </div>
     </div>
 </div>
       </div>
@@ -91,5 +105,3 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
 };
 
 export default Modal;
-
-

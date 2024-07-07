@@ -5,7 +5,7 @@ import useModalStore from '../../stores/useModalStore';
 import Modal from '../../components/Model';
 
 const RedPage = () => {
-  const { modal1Open, modal2Open, modal3Open, toggleModal1, toggleModal2, toggleModal3 } = useModalStore();
+  const { modal1Open, modal3Open, toggleModal1, toggleModal3 } = useModalStore();
 
   return (
     <div className="min-h-screen bg-red-300 flex flex-col items-center justify-center">

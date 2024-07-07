@@ -1,4 +1,4 @@
-// app/green/layout.tsx
+// app/red/layout.tsx
 import { ReactNode } from 'react';
 
 interface RedLayoutProps {
