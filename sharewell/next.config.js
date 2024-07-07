@@ -1,11 +1,16 @@
-module.exports = {
-    async redirects() {
-      return [
-        {
-          source: '/',
-          destination: '/green',
-          permanent: true,
-        },
-      ];
-    },
-  };
+// @ts-check
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/green',
+        permanent: true,
+      },
+    ];
+  },
+}
+
+module.exports = nextConfig;
