@@ -20,4 +20,6 @@ export const tailwindClasses = {
     'font-[Roboto]': 'font-[Roboto]',
     'text-zinc-800': 'text-zinc-800',
     'py-3': 'py-3',
+    'text-lg': 'text-lg',
+    'h-12': 'h-12',
   };

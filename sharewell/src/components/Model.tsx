@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import useModalStore from '@/stores/useModalStore';
 import modalData from '../data/modalData.json';
 import Image from 'next/image';
-import { tailwindClasses } from '@/tailwind';
+import { tailwindClasses } from '@/data/tailwind';
 
 interface ModalProps {
   title: 'Modal 1' | 'Modal 2' | 'Modal 3';
