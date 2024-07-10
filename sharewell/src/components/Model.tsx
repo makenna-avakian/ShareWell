@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import useModalStore from '@/stores/useModalStore';
 import modalData from '../data/modalData.json';
 import Image from 'next/image';
+import { tailwindClasses } from '@/data/tailwind';
 
 interface ModalProps {
   title: 'Modal 1' | 'Modal 2' | 'Modal 3';
@@ -61,7 +62,7 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
       <div ref={modalRef} 
-      className="w-[339px] h-[505px] bg-white rounded-xl flex-col justify-start items-center sm:w-[339px] sm:h-[505px] md:w-[640px] md:h-[498px] lg:w-[640px] lg:h-[498px] overflow-auto"
+      className="w-[339px] h-[477px] bg-white rounded-xl flex-col justify-start items-center sm:w-[339px] sm:h-[477px] md:w-[640px] md:h-[498px] lg:w-[640px] lg:h-[498px] overflow-auto"
       >
     <div className="self-stretch h-[181px] bg-indigo-500 justify-center items-center gap-2.5  sm:self-stretch sm:h-[181px] sm:bg-indigo-500 sm:justify-center sm:items-center sm:gap-2.5 md:w-[640px] md:h-56 md:bg-indigo-500 md:justify-center md:items-center md:gap-2.5 lg:self-stretch lg:h-56 lg:bg-indigo-500 lg:shadow-custom lg:justify-center lg:items-center lg:gap-2.5 relative overflow-hidden">
         <div className="flex-col justify-start items-start gap-3 inline-flex text-left ml-6 mt-12 mb-6 md:ml-12 md:mt-12 lg:ml-12 lg:mt-12">
@@ -82,12 +83,12 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
         </div>
         <div className="w-6 h-6 relative" />
     </div>
-    <div className="w-[339px] h-[150px] px-6 pt-4 pb-6 self-stretch flex-col justify-center items-start gap-4 flex sm:h-32 sm:text-base sm:font-medium lg:h-20 lg:text-sm lg:font-normal md:h-20 md:text-sm md:font-medium">
+    <div className="px-6 pt-4 pb-6 self-stretch flex-col justify-center items-start gap-4 flex sm:h-32 sm:text-base sm:font-medium lg:h-20 lg:text-sm lg:font-normal md:h-20 md:text-sm md:font-medium">
         <div className={modalInfo.body.className}>{modalInfo.body.text}</div>
     </div>
     <div className="self-stretch h-[126px] p-6 border-t border-gray-200 flex-col justify-start items-start gap-2.5 flex lg:h-[124px] md:h-[124px] sm:h-[126px]">
         <div className="self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight sm:font-medium lg:font-medium md:font-normal">{modalInfo.dummy.text}</div>
-        <div className={modalInfo.button.className + " self-stretch bg-teal-500 opacity-10 rounded-xl justify-center items-center inline-flex"}>
+        <div className={modalInfo.button.className + " gap-2 self-stretch bg-teal-500 opacity-10 rounded-xl justify-center items-center inline-flex"}>
             <div className={modalInfo.button.buttonClassName}>{modalInfo.button.text}</div>
         </div>
     </div>
