@@ -74,14 +74,14 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
         </div>
         <img src="/images/logo.svg" alt="logo" className={"absolute bottom-0 right-0 "+ modalInfo.image.className}/>
     </div>
-    <div className="self-stretch px-6 pt-6 justify-start items-center gap-2.5 inline-flex">
+    <div className="w-[339px] h-[70px] lg:w-[640px] lg:h-[70px] md:w-[640px] md:h-[70px] px-6 pt-6 justify-start items-center gap-2.5 inline-flex">
         <div className="flex-col justify-start items-start inline-flex">
             <div className="flex-col justify-start items-start gap-1 flex">
             <div className={modalInfo.subtitle1.className}>{modalInfo.subtitle1.text}</div>
                 <div className={modalInfo.subtitle2.className}>{modalInfo.subtitle2.text}</div>
             </div>
         </div>
-        <div className="w-6 h-6 relative" />
+        <img src="/images/close-outline.svg" alt="exit" className="w-6 h-6 ml-auto relative"/>
     </div>
     <div className="px-6 pt-4 pb-6 self-stretch flex-col justify-center items-start gap-4 flex sm:h-32 sm:text-base sm:font-medium lg:h-20 lg:text-sm lg:font-normal md:h-20 md:text-sm md:font-medium">
         <div className={modalInfo.body.className}>{modalInfo.body.text}</div>
