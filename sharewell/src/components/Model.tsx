@@ -1,28 +1,24 @@
-import React, {useEffect, useRef, useState} from "react";
-import useModalStore from "@/stores/useModalStore";
+import React, { useEffect, useRef, useState } from 'react';
+import useModalStore from '@/stores/useModalStore';
 import modalData from '../data/modalData.json';
 import Image from 'next/image';
-import { tailwindClasses } from "@/app/tailwindclasses";
 
 interface ModalProps {
   title: 'Modal 1' | 'Modal 2' | 'Modal 3';
 }
+
 
 const Modal: React.FC<ModalProps> = ({ title }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const { closeModal1, closeModal2, closeModal3 } = useModalStore();
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg'>('sm');
 
-  // Determine screen size
+  //Find the screen size and listen for resize events
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setScreenSize('lg');
-      } else if (window.innerWidth >= 768) {
-        setScreenSize('md');
-      } else {
-        setScreenSize('sm');
-      }
+      if (window.innerWidth >= 1024) setScreenSize('lg');
+      else if (window.innerWidth >= 768) setScreenSize('md');
+      else setScreenSize('sm');
     };
 
     window.addEventListener('resize', handleResize);
@@ -31,13 +27,12 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Handle closing outside of the Modal
+  //Close the modal when clicked outside
   const handleClose = () => {
     if (title === 'Modal 1') closeModal1();
-    if (title === 'Modal 2') closeModal2();
-    if (title === 'Modal 3') closeModal3();
+    else if (title === 'Modal 2') closeModal2();
+    else if (title === 'Modal 3') closeModal3();
   };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
@@ -46,22 +41,19 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [handleClose]);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-  // Modal info based on title and screen size
+  //Get the modal data based on the screen size and the modal title
   const getModalInfo = (title: string) => {
-    let modalInfo;
-    if (screenSize === 'lg') {
-      modalInfo = title === 'Modal 1' ? modalData.web.modal4 : title === 'Modal 2' ? modalData.web.modal5 : modalData.web.modal6;
-    } else if (screenSize === 'md') {
-      modalInfo = title === 'Modal 1' ? modalData.tablet.modal7 : title === 'Modal 2' ? modalData.tablet.modal8 : modalData.tablet.modal9;
-    } else {
-      modalInfo = title === 'Modal 1' ? modalData.mobile.modal1 : title === 'Modal 2' ? modalData.mobile.modal2 : modalData.mobile.modal3;
+    switch (screenSize) {
+      case 'lg':
+        return modalData.web[`modal${title === 'Modal 1' ? '4' : title === 'Modal 2' ? '5' : '6'}`];
+      case 'md':
+        return modalData.tablet[`modal${title === 'Modal 1' ? '7' : title === 'Modal 2' ? '8' : '9'}`];
+      default:
+        return modalData.mobile[`modal${title === 'Modal 1' ? '1' : title === 'Modal 2' ? '2' : '3'}`];
     }
-    return modalInfo;
   };
 
   const modalInfo = getModalInfo(title);
@@ -81,7 +73,7 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
         </div>
         <img src="/images/logo.svg" alt="logo" className={"absolute bottom-0 right-0 "+ modalInfo.image.className}/>
     </div>
-    <div className="self-stretch px-6 pt-6 justify-start items-center gap-2.5 ">
+    <div className="self-stretch px-6 pt-6 justify-start items-center gap-2.5 inline-flex">
         <div className="flex-col justify-start items-start inline-flex">
             <div className="flex-col justify-start items-start gap-1 flex">
             <div className={modalInfo.subtitle1.className}>{modalInfo.subtitle1.text}</div>
