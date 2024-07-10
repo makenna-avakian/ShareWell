@@ -22,4 +22,5 @@ export const tailwindClasses = {
     'py-3': 'py-3',
     'text-lg': 'text-lg',
     'h-12': 'h-12',
+
   };
