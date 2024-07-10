@@ -293,7 +293,7 @@
             "className": "w-[158.15px] h-[150.61px] -mt-2"
           },
           "button": {
-            "className": "w-[291px] px-[72px] h-12 py-4",
+            "className": "w-[291px] h-12 px-[72px] py-4 ",
             "text": "Lorem Ipsum",
             "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Roboto'] leading-none tracking-wide"
           }
@@ -335,7 +335,7 @@
             "className": "w-[158.15px] h-[150.61px] -m-4"
           },
           "button": {
-            "className": "px-[72px] py-4",
+            "className": "w-[291px] h-12 px-[72px] py-4 ",
             "text": "Lorem Ipsum",
             "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Roboto'] leading-none tracking-wide"
           }
@@ -377,7 +377,7 @@
             "className": "w-[158.15px] h-[150.61px] -m-4"
           },
           "button": {
-            "className": "px-[72px] py-4",
+            "className": "w-[291px] h-12 px-[72px] py-4 ",
             "text": "Lorem Ipsum",
             "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-[Roboto] leading-none tracking-wide"
           }
