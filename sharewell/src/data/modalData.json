@@ -39,7 +39,7 @@
       "button": {
         "className": "self-stretch px-8 py-3 bg-teal-500 opacity-10 rounded-xl justify-center items-center gap-2 inline-flex",
         "text": "Lorem Ipsum",
-        "buttonClassName": "text-zinc-800 opacity-20 text-base font-normal font-['Poppins'] uppercase leading-snug"
+        "buttonClassName": "text-base font-normal font-['Poppins'] uppercase leading-snug"
       }
     },
     "modal5": {
@@ -81,7 +81,7 @@
       "button": {
         "className": "w-[592px] h-[46px] px-8 py-3",
         "text": "Lorem Ipsum",
-        "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Poppins'] leading-snug"
+        "buttonClassName": "text-base font-medium font-['Poppins'] leading-snug"
       }
     },
     "modal6": {
@@ -123,7 +123,7 @@
       "button": {
         "className": "px-8 py-3",
         "text": "Lorem Ipsum",
-        "buttonClassName": "text-zinc-800 opacity-20 text-lg font-normal font-['Poppins'] leading-loose tracking-wide"
+        "buttonClassName": "text-lg font-normal font-['Poppins'] leading-loose tracking-wide"
       }
     }
   },
@@ -167,7 +167,7 @@
         "button": {
           "className": "w-[592px] h-[46px] px-8 py-3 gap 2",
           "text": "Lorem Ipsum",
-          "buttonClassName": "text-zinc-800/opacity-20 text-base font-semibold font-['Poppins'] uppercase leading-snug"
+          "buttonClassName": "text-base font-semibold font-['Poppins'] uppercase leading-snug"
         }
       },
       "modal8": {
@@ -209,7 +209,7 @@
         "button": {
           "className": "w-[592px] h-[46px] px-8 py-3 gap 2",
           "text": "Lorem Ipsum",
-          "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Poppins'] leading-snug"
+          "buttonClassName": "text-base font-medium font-['Poppins'] leading-snug"
         }
       },
       "modal9": {
@@ -251,7 +251,7 @@
         "button": {
           "className": "w-[592px] h-[46px] px-8 py-3 gap 2",
           "text": "Lorem Ipsum",
-          "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Poppins'] leading-snug"
+          "buttonClassName": "text-base font-medium font-['Poppins'] leading-snug"
         }
       }
     },
@@ -295,7 +295,7 @@
           "button": {
             "className": "w-[291px] h-12 px-[72px] py-4 ",
             "text": "Lorem Ipsum",
-            "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Roboto'] leading-none tracking-wide"
+            "buttonClassName": "text-base font-medium font-['Roboto'] leading-none tracking-wide"
           }
         },
         "modal2": {
@@ -337,7 +337,7 @@
           "button": {
             "className": "w-[291px] h-12 px-[72px] py-4 ",
             "text": "Lorem Ipsum",
-            "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-['Roboto'] leading-none tracking-wide"
+            "buttonClassName": "text-base font-medium font-['Roboto'] leading-none tracking-wide"
           }
         },
         "modal3": {
@@ -379,7 +379,7 @@
           "button": {
             "className": "w-[291px] h-12 px-[72px] py-4 ",
             "text": "Lorem Ipsum",
-            "buttonClassName": "text-zinc-800 opacity-20 text-base font-medium font-[Roboto] leading-none tracking-wide"
+            "buttonClassName": "text-base font-medium font-[Roboto] leading-none tracking-wide"
           }
         }
       }    

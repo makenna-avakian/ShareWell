@@ -88,8 +88,8 @@ const Modal: React.FC<ModalProps> = ({ title }) => {
     </div>
     <div className="self-stretch h-[126px] p-6 border-t border-gray-200 flex-col justify-start items-start gap-2.5 flex lg:h-[124px] md:h-[124px] sm:h-[126px]">
         <div className="self-stretch text-center text-neutral-600 text-sm font-medium font-['Poppins'] leading-tight sm:font-medium lg:font-medium md:font-normal">{modalInfo.dummy.text}</div>
-        <div className={modalInfo.button.className + " gap-2 self-stretch bg-teal-500 opacity-10 rounded-xl justify-center items-center inline-flex"}>
-            <div className={modalInfo.button.buttonClassName}>{modalInfo.button.text}</div>
+        <div className={modalInfo.button.className + " gap-2 self-stretch bg-teal-500 bg-opacity-10 rounded-xl justify-center items-center inline-flex"}>
+            <div className={modalInfo.button.buttonClassName + " text-zinc-800 text-opacity-20"}>{modalInfo.button.text}</div>
         </div>
     </div>
 </div>
